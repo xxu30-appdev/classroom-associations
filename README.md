@@ -16,7 +16,9 @@
 
 ## Introduction
 
-This application has 3 database tables:
+You'll start with an almost blank application that just has a navbar with links corresponding to each necessary resource. 
+
+This application has 2 database tables:
 
  - students (columns: first_name, last_name, email)
  - courses (columns: name)
