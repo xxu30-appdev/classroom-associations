@@ -1,8 +1,7 @@
-# Midterm
+# Classroom
 
 ## Setup
 
- 1. [Switch your Cloud9 workspace from Public to Private](https://guides.firstdraft.com/setting-up-your-cloud9-workspace.html#set-your-workspace-to-be-private) if you haven't already.
  1. Clone this repo to your workspace as usual
  1. In a Terminal, run `bin/setup` as usual.
  1. In a Terminal, run `bin/server` as usual.
@@ -16,7 +15,7 @@
 
 ## Introduction
 
-You'll start with an almost blank application that just has a navbar with links corresponding to each necessary resource. 
+You'll start with an almost blank application that just has a navbar with links corresponding to each necessary resource.
 
 This application has 2 database tables:
 
