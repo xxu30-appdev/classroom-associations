@@ -49,13 +49,13 @@ Build the Golden Seven for Students and Courses from scratch, the same way that 
 
 Make yours work like it. Your local app is using a light theme, and the reference app is using a dark theme so that you don't get confused between tabs as you try to check your work.
 
-Click through the app and debug. Try adding a new student, updating a student, looking at the details of a student, and deleting a student.
-
-Sometimes you will get an error message; sometimes there won't be an error message, but the action just won't do its job. **Use the server log to help figure out what's going on.**
+If you run into any problems or error messages, **use the server log to help figure out what's going on.**
 
 ---
 
 All in all, you need to:
 
- - Build the Golden Seven for Students from scratch. I've already generated the model for you, so you just have to do the RCAVs.
- - Build the Golden Seven for Courses from scratch. I've already generated the model for you, so you just have to do the RCAVs.
+ - Build the Golden Seven for Students from scratch
+ - Build the Golden Seven for Courses from scratch
+
+I've already generated the models for you, so you just have to do the RCAVs.
