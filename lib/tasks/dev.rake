@@ -70,18 +70,18 @@ namespace :dev do
     puts "There are now #{Department.count} departments in the database."
 
     course_info_hashes = [
-      {title: "Application Development", department: d1}
-      {title: "Composition", department: d2}
-      {title: "Economics", department: d3}
-      {title: "Product Management", department: d1}
-      {title: "Finance", department: d3}
-      {title: "Negotiation", department: d3}
+      {title: "Application Development", department_id: d1.id},
+      {title: "Composition", department_id: d2.id},
+      {title: "Economics", department_id: d3.id},
+      {title: "Product Management", department_id: d1.id},
+      {title: "Finance", department_id: d3.id},
+      {title: "Negotiation", department_id: d3.id},
     ]
 
     course_info_hashes.each do |course_info_hash|
       course = Course.new
       course.title = course_info_hash[:title]
-      course.department = course_info_hash[:department]
+      course.department_id = course_info_hash[:department_id]
       course.save
     end
 
