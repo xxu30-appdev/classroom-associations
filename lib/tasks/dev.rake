@@ -48,7 +48,7 @@ namespace :dev do
 
   end
 
-  desc "reset the database with courses that have departement IDs"
+  desc "reset the database with courses that have department IDs"
   task prime_associated_departments: :environment do
     Student.destroy_all
     20.times do
@@ -93,5 +93,22 @@ namespace :dev do
 
     puts "There are now #{Course.count} courses in the database."
 
+  end
+
+
+  desc "reset the database with associated courses, departments, students and enrollments"
+  task prime_enrollments: [:environment] do
+    Enrollment.destroy_all
+    Student.all.each do |student|
+      num_courses = rand(4) + 1
+      course_ids = Course.all.map { |c| c.id }
+      num_courses.times do
+        Enrollment.create(
+          student_id: student.id,
+          course_id: course_ids.shuffle!.pop
+        )
+      end
+    end
+    puts "There are now #{Enrollment.count} enrollments in the database."
   end
 end
