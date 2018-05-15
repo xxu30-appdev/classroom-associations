@@ -2,6 +2,7 @@ namespace :dev do
   desc "Hydrate the database with some dummy data to make it easier to develop"
   task prime: "db:setup" do
 
+    Student.destroy_all
     20.times do
       student = Student.new
       student.first_name = Faker::Name.first_name
@@ -12,6 +13,7 @@ namespace :dev do
 
     puts "There are now #{Student.count} students in the database."
 
+    Department.destroy_all
     department_names = [
       "Technology",
       "English",
@@ -26,6 +28,7 @@ namespace :dev do
 
     puts "There are now #{Department.count} departments in the database."
 
+    Course.destroy_all
     course_titles = [
       "Application Development",
       "Composition",
@@ -47,6 +50,7 @@ namespace :dev do
 
   desc "reset the database with courses that have departement IDs"
   task prime_associated_departments: :environment do
+    Student.destroy_all
     20.times do
       student = Student.new
       student.first_name = Faker::Name.first_name
@@ -57,6 +61,7 @@ namespace :dev do
 
     puts "There are now #{Student.count} students in the database."
 
+    Department.destroy_all
     department_names = [
       "Technology",
       "English",
@@ -69,6 +74,7 @@ namespace :dev do
 
     puts "There are now #{Department.count} departments in the database."
 
+    Course.destroy_all
     course_info_hashes = [
       {title: "Application Development", department_id: d1.id},
       {title: "Composition", department_id: d2.id},
