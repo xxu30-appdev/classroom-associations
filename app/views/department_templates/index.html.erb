@@ -1,0 +1,42 @@
+<h1>
+  All departments
+</h1>
+
+<a href="/departments/new">
+  Add a new department
+</a>
+
+<hr>
+
+<table class="table">
+  <tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Name
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @departments.each do |department| %>
+  <tr>
+    <td>
+      <%= department.id %>
+    </td>
+
+    <td>
+      <%= department.name %>
+    </td>
+
+    <td>
+      <a href="/departments/<%= department.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

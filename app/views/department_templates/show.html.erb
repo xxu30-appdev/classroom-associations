@@ -1,0 +1,28 @@
+<h1>
+  Department #<%= @department.id %> details
+</h1>
+
+<a href="/departments/<%= @department.id %>/edit">
+  Edit department
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @department.name %>
+  </dd>
+</dl>
+
+<a href="/delete_department/<%= @department.id %>">
+  Delete department
+</a>
+
+<hr>
+
+<a href="/departments">
+  Go back
+</a>

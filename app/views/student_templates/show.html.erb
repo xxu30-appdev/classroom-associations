@@ -1,0 +1,42 @@
+<h1>
+  Student #<%= @student.id %> details
+</h1>
+
+<a href="/students/<%= @student.id %>/edit">
+  Edit student
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    First name
+  </dt>
+  <dd>
+    <%= @student.first_name %>
+  </dd>
+
+  <dt>
+    Last name
+  </dt>
+  <dd>
+    <%= @student.last_name %>
+  </dd>
+
+  <dt>
+    Email
+  </dt>
+  <dd>
+    <%= @student.email %>
+  </dd>
+</dl>
+
+<a href="/delete_student/<%= @student.id %>">
+  Delete student
+</a>
+
+<hr>
+
+<a href="/students">
+  Go back
+</a>

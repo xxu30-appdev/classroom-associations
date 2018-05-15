@@ -28,5 +28,19 @@ namespace :dev do
     end
 
     puts "There are now #{Course.count} courses in the database."
+
+    department_names = [
+      "Technology",
+      "English",
+      "Business",
+    ]
+
+    department_names.each do |department_name|
+      department = Department.new
+      department.name = department_name
+      department.save
+    end
+
+    puts "There are now #{Department.count} departments in the database."
   end
 end

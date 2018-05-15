@@ -1,0 +1,35 @@
+<!-- Validation failure messages -->
+<% if @department.errors.any? %>
+  <% @department.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit department #<%= @department.id %>
+</h1>
+
+<hr>
+
+<form action="/update_department/<%= @department.id %>" method="post">
+  <!-- Label and input for name -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <input type="text" id="name" name="name" class="form-control" value="<%= @department.name %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update department
+  </button>
+</form>
+
+<hr>
+
+<a href="/departments">
+  Go back
+</a>

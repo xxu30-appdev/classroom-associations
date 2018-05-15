@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @student.present? %>
+  <% if @student.errors.any? %>
+    <% @student.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new student
+</h1>
+
+<hr>
+
+<form action="/create_student" method="post">
+  <!-- Label and input for first_name -->
+  <div class="form-group">
+    <label for="first_name">
+      First name
+    </label>
+
+    <input type="text" id="first_name" name="first_name" class="form-control" value="<%= @student.try(:first_name) %>">
+  </div>
+
+  <!-- Label and input for last_name -->
+  <div class="form-group">
+    <label for="last_name">
+      Last name
+    </label>
+
+    <input type="text" id="last_name" name="last_name" class="form-control" value="<%= @student.try(:last_name) %>">
+  </div>
+
+  <!-- Label and input for email -->
+  <div class="form-group">
+    <label for="email">
+      Email
+    </label>
+
+    <input type="text" id="email" name="email" class="form-control" value="<%= @student.try(:email) %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create student
+  </button>
+</form>
+
+<hr>
+
+<a href="/students">
+  Go back
+</a>

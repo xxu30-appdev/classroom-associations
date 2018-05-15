@@ -1,0 +1,28 @@
+<h1>
+  Course #<%= @course.id %> details
+</h1>
+
+<a href="/courses/<%= @course.id %>/edit">
+  Edit course
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Title
+  </dt>
+  <dd>
+    <%= @course.title %>
+  </dd>
+</dl>
+
+<a href="/delete_course/<%= @course.id %>">
+  Delete course
+</a>
+
+<hr>
+
+<a href="/courses">
+  Go back
+</a>
