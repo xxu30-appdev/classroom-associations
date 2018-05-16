@@ -1,7 +1,7 @@
 require Rails.root.join("spec", "support", "increasing_random.rb")
 
 FactoryBot.define do
-  factory :course do
-    sequence(:title) { |n| "Some fake title #{n}" }
+  factory :department do
+    sequence(:name) { |n| "Some fake name #{n}" }
   end
 end
