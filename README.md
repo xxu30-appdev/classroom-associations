@@ -108,7 +108,7 @@ If at all possible, try to think of a good, descriptive, real-world name for the
 
 How about "Enrollment"?
 
-Add the Character CRUD resource to our application:
+Add the Enrollment CRUD resource to our application:
 
 ```
 rails generate draft:resource enrollment course_id:integer student_id:integer
