@@ -39,7 +39,7 @@ GIT
 
 GIT
   remote: https://github.com/firstdraft/draft_log.git
-  revision: e37849266cfdf1e183268624b5deade705af7d7d
+  revision: 724a04c4eeb4f8f2ba9d2d641eb770cb6d59ee22
   specs:
     draft_log (0.0.0)
       awesome_print
