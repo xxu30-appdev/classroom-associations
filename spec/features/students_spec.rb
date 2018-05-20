@@ -86,7 +86,7 @@ describe "/students/[STUDENT ID]" do
     students.each do |student|
       visit "/students/#{student.id}"
       enrollments = Enrollment.where(student_id: student.id)
-      student.enrollments.each do |enrollment|
+      enrollments.each do |enrollment|
         course = Course.find_by(id: enrollment.course_id)
         expect(page).to have_content(course.title)
       end
