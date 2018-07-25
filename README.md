@@ -10,17 +10,16 @@ In this project, we'll practice associating rows from different tables to one an
 
 (Don't worry about styling -- focus on functionality only.)
 
-## Setup
+## Standard Workflow
 
- 1. Clone this project to your Cloud9 workspace as usual
- 1. `bin/setup`
- 1. Click the Run Project button
- 1. Navigate to the app preview in Chrome and verify that it works. You should see a functional version of the courses index page.
- 1. I've already added the [draft_generators](https://guides.firstdraft.com/draftgenerators.html) gem to the `Gemfile` for you, but you might want to go read that Guide to get an overview of what it does for us.
- 1. Run `rails grade:all` as you go to check your progress
- 1. If at any point `rails grade:all` fails with the message "Migrations are pending. To resolve this issue, run: bin/rake db:migrate RAILS_ENV=test" then run
-
-        rails db:migrate RAILS_ENV=test
+ 1. From [your Cloud9 repositories list](https://c9.io/account/repos), set up a workspace [as usual](https://guides.firstdraft.com/starting-on-a-project-in-cloud9).
+ 1. Set up the project: `bin/setup`
+ 1. Add some dummy data with: `rails dev:prime`
+ 1. Start the web server by clicking "Run Project".
+ 1. Navigate to your live application preview.
+ 1. As you work, remember to navigate to `/git` and **commit often as you work.**
+ 1. Make new branches freely to experiment! _Especially_ before starting on a new task.
+ 1. Run `rails grade` as often as you like to see how you are doing, but **make sure you test your app manually first to make sure it matches the target's behavior first**.
 
 ## Two important notes about `rails console`
 

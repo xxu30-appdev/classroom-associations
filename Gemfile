@@ -52,19 +52,19 @@ group :development, :test do
   gem "grade_runner", github: "firstdraft/grade_runner"
   gem "web_git", github: "firstdraft/web_git"
   gem "awesome_print"
+  gem "better_errors"
+  gem "draft_log", github: "firstdraft/draft_log"
+  gem "console_ip_whitelist", github: "firstdraft/console_ip_whitelist"
 end
 
 group :development do
   gem "annotate"
-  gem "better_errors"
-  gem "draft_log", github: "firstdraft/draft_log"
   gem "dev_toolbar", github: "firstdraft/dev_toolbar"
   gem "binding_of_caller"
   gem "draft_generators", github: "firstdraft/draft_generators"
   gem "letter_opener"
   gem "meta_request"
   gem "wdm", platforms: [:mingw, :mswin, :x64_mingw]
-  gem "console_ip_whitelist", github: "firstdraft/console_ip_whitelist"
 end
 
 group :test do
