@@ -1,0 +1,35 @@
+<h1>
+  Add a new enrollment
+</h1>
+
+
+<hr>
+
+<form action="/create_enrollment" method="post">
+
+  <div class="form-group">
+    <label for="course_id">
+      Course
+    </label>
+
+    <input type="text" id="course_id" name="course_id" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="student_id">
+      Student
+    </label>
+
+    <input type="text" id="student_id" name="student_id" class="form-control">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create enrollment
+  </button>
+</form>
+
+<hr>
+
+<a href="/enrollments">
+  Go back
+</a>
