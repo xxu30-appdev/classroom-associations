@@ -19,7 +19,7 @@ class CoursesController < ApplicationController
     @course = Course.new
 
     @course.title = params.fetch("title")
-
+    @course.department_id = params.fetch("department_id")
     if @course.valid?
       @course.save
 
@@ -31,13 +31,13 @@ class CoursesController < ApplicationController
 
   def edit_form
     @course = Course.find(params.fetch("prefill_with_id"))
-
+   
     render("course_templates/edit_form.html.erb")
   end
 
   def update_row
     @course = Course.find(params.fetch("id_to_modify"))
-
+    @course.department_id = params.fetch("department_id")
     @course.title = params.fetch("title")
 
     if @course.valid?
